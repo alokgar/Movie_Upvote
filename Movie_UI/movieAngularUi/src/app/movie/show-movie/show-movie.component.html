@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+        <table class="table">
+            <tr style="background-color: darkkhaki;">
+                <th>MovieTitle</th>
+                <th>ReleaseDate</th>
+                <th>Upvotes</th>
+                <th> click to upvote </th>
+            </tr>
+
+              <tr *ngFor="let dataItem of MovieList">
+                <td>{{dataItem.MovieTitle}}</td>
+                <td>{{dataItem.ReleaseDate}}</td>
+                <td>{{dataItem.Upvotes}}</td>
+                <td><button (click)="upvoteClick(dataItem)"> upvote </button></td>
+              </tr>
+          </table>
+   
+    </div>
+  </body>
+</html>
+
+
+
